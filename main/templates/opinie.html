@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Dawid Rejniak | Trener Personalny</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description"
+        content="Personalne treningi, diagnostyka sportowa i przygotowanie motoryczne. Pomagam osiągać cele fitness i poprawić wyniki sportowe.">
+    <meta name="keywords" content="opinie klientów, recenzje, zdania podopiecznych, trener personalny lublin, treningi">
+    <link rel="canonical" href="https://dawidrejniak.pl/">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dawid Rejniak | Trener Personalny">
+    <meta property="og:description"
+        content="Personalne treningi, diagnostyka sportowa i przygotowanie motoryczne. Pomagam osiągać cele fitness i poprawić wyniki sportowe.">
+    <meta property="og:url" content="https:/dawidrejniak.pl/">
+    <meta property="og:site_name" content="Dawid Rejniak">
+    <meta property="article:publisher" content="https://www.instagram.com/dawid_rejniak/">
+    <meta property="article:modified_time" content="2024-11-06T03:17:18+00:00">
+    <meta property="og:image" content="{% static 'main.jpg' %}">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="200">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:label1" content="Szacowany czas czytania">
+    <meta name="twitter:data1" content="1 minuta">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
+    <script src="{% static 'script.js' %}"></script> 
+    
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setCookieDomain", "*.dawidrejniak.pl"]);
+    _paq.push(["setDomains", ["*.dawidrejniak.pl"]]);
+    _paq.push(["disableCampaignParameters"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//stats68.mydevil.net/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '18']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+<body class="notindex">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'logo.png' %}" alt="Logo Dawid Rejniak">
+            </a>
+            <div class="hamburger" onclick="toggleMenu(this)">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'opinie' %}">Opinie</a></li>
+                <li><a href="{% url 'index' %}#kontakt">Kontakt</a></li>
+            </ul>
+            <ul class="nav-links-mobile">
+                <li><a href="{% url 'opinie' %}">Opinie</a></li>
+                <li><a href="{% url 'index' %}#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="navbreak"></div>
+        <h1 style="text-align: center; margin-bottom:40px;">Opinie</h1>
+        <section class="section section-4">
+            <div class="section-4-opinia">
+                <p>Dawid bardzo opanowany trener jeśli nie miałeś nic wspólnego z siłownią tak jak ja wytłumaczy ci każde ćwiczenie krok po kroku z każdym treningiem czułem progres !!! Polecam</p>
+                <div class="section-4-opinia-info">
+                    <div class="section-4-opinia-info-dane">
+                        <h3>Michał Kowalski</h3>
+                        <p>Google</p>
+                    </div>
+                    <div class="section-4-opinia-info-stars">
+                        <img src="{% static 'stars.png' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="section-4-opinia">
+                <p>Świetny trener personalny, który potrafi dopasować plan treningowy do potrzeb i możliwości swojego podopiecznego. To osoba cierpliwa, pełna energii i motywująca, która pomaga w osiąganiu zamierzonych celów treningowych. Gorąco polecam jego usługi!</p>
+                <div class="section-4-opinia-info">
+                    <div class="section-4-opinia-info-dane">
+                        <h3>Kaśka</h3>
+                        <p>Google</p>
+                    </div>
+                    <div class="section-4-opinia-info-stars">
+                        <img src="{% static 'stars.png' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="section-4-opinia">
+                <p>Świetny trener, super komfortowa atmosfera na treningach, ćwiczenia są tłumaczone w zrozumiały sposób, o wszystko można zapytać. Polecam każdemu kto zaczyna swoją przygodę na siłowni!</p>
+                <div class="section-4-opinia-info">
+                    <div class="section-4-opinia-info-dane">
+                        <h3>Ada S.</h3>
+                        <p>Oferteo</p>
+                    </div>
+                    <div class="section-4-opinia-info-stars">
+                        <img src="{% static 'stars.png' %}">
+                    </div>
+                </div>
+            </div>
+        <div class="section-4-opinia">
+            <p>Mega profesjonalny gość z zacięciem fizjoterapeutycznym. Widać że lubi to co robi. Nie myślałem że po operacji kręgosłupa mogę robić takie rzeczy jak z Dawidem. Zawsze przygotowany. Nigdy nie jest nudno. Poszedłem niby na kilka treningów a za chwilę będzie rok i nie wyobrażam sobie współpracy z kimś innym. Z pełnym przekonaniem polecam także parom. Kilka miesięcy temu dołączyła moja żona i jest nie mniej zadowolona.</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Włodzimierz Sierociuk</h3>
+                    <p>Facebook</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Dawid oraz cały power Club niesamowicie pomogły mi zrzucić 40kg wagi. Dzięki jego indywidualnemu podejściu do każdego z trenujących bardzo dużo nauczyłem się o samej siłowni jak i wykonywać dane ćwiczenia. Dzięki jego pomocy na sali, nie tylko poprawiłem swoją sylwetkę, ale również miało to przełożenie na sukcesy w dwóch innych dyscyplinach sportu. Jestem mu za to bardzo wdzięczny i polecam z całego serca.</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Bartek Rogalski</h3>
+                    <p>Facebook</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Bardzo polecam! Rozpisał dla mnie idealny plan treningowy, który był dobrze dostosowany do moich celów i możliwości. Dzięki jego wiedzy i doświadczeniu udało mi się osiągnąć świetne wyniki w dość krótkim czasie, był też bardzo cierpliwy i pomocny, zawsze odpowiadał na moje pytania i udzielał wskazówek. Polecam go każdemu, kto szuka profesjonalnego i skutecznego trenera!</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Antoni J.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Konkretne i dobrane indywidualnie treningi,<br>
+                Przy współpracy z Dawidem, powoli osiągam swój cel :)<br>
+                Polecam z całego serducha!</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Kamila Czapla</h3>
+                    <p>Google</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Super współpraca, indywidualne podejście i staranność, plan dopasowany pod mój tryb życia i możliwości, odpowiednia osoba na odpowiednim miejscu.</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Liwia S.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Świetna współpraca, luźna atmosfera na treningach, zawsze wszystko precyzyjnie wyjaśnione. Z całego serduszka polecam!</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Natalia M.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Ćwiczenia dostowane do indywidualnych potrzeb. Dobra atmosfera i motywacja. Polecam </p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Marysia</h3>
+                    <p>Facebook</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Współpracujemy razem od ponad roku i nawet gdybym chciał, to nie jestem w stanie powiedzieć złego zdania o Dawidzie. Bardzo polecam.</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Maksymilian Wasilewski</h3>
+                    <p>Google</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Pełny profesjonalizm, przyjemna atmosfera na treningach, ćwiczę z Dawidem od 5 miesięcy i mogę szczerze go polecić :)</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Mikołaj K.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Personalne podejście i świetna, profesjonalna pomoc Polecam</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Jakub Ż.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Trenuję z Dawidem już od pół roku. Mimo że nie mam jeszcze nawet trzydziestu, cierpiałem na przewlekłe bóle pleców, a konsultacje lekarskie i treningi online nie przynosiły efektów. Teraz, dzięki treningom Dawida, ból prawie zniknął, a moje samopoczucie i forma znacznie się poprawiły. I to dopiero początek.<br>Dawid to prawdziwy profesjonalista: z uwagą podchodzi do każdego problemu, stale się rozwija i skutecznie wykorzystuje swoją wiedzę z fizjoterapii</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Nikita Shaguta</h3>
+                    <p>Facebook</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Miła, luźna atmosfera, a jednocześnie bardzo profesjonalne podejście.</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>hugozgq</h3>
+                    <p>Google</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+            <div class="middle">
+        <a href="{% url 'index' %}#kontakt">
+            <div class="section-4-button">
+                <button class="cta" onclick="location.href='opinie'">
+                    <span>Umów konsultację </span>
+                    <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                </button>
+            </div>
+        </a>
+    </div>
+    </section>
+    <script>
+            function toggleMenu(hamburger) {
+        console.log("test")
+        hamburger.classList.toggle("active");
+        document.querySelector(".nav-links-mobile").classList.toggle("active");
+    }
+    </script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Dawid Rejniak</h3>
+                    <p>Wspieram rozwój tych, którzy chcą być silniejsi, zdrowsi i bardziej sprawni.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Szybkie linki</h4>
+                    <ul>
+                        <li><a href="{% url 'opinie' %}">Opinie</a></li>
+                        <li><a href="">Galeria</a></li>
+                        <li><a href="{% url 'index' %}#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-details">
+                    <h4>Kontakt</h4>
+                    <p>Telefon: <a href="tel:+48536407148">+48 536 407 148</a></p>
+                    <p>Email: <a href="mailto:dawidrejniak3@gmail.com">dawidrejniak3@gmail.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>SocialMedia</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/DawidRejniakTrener"><img src="{% static 'facebook.png' %}" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/dawid_rejniak"><img src="{% static 'instagram.png' %}" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dawid Rejniak - Trener Personalny (NIP: 7133124302)<br>Wszelkie prawa zastrzeżone. <a href="polityka_prywatnosci">Polityka prywatności</a></p><br>
+            </div>
+            <div class="author">
+                <p>Strona stworzona przez <a href="https://instagram.com/maksdesign.pl">Maks<u>Design</u>.pl</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,526 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Dawid Rejniak | Trener Personalny</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description"
+        content="Personalne treningi, diagnostyka sportowa i przygotowanie motoryczne. Pomagam osiągać cele fitness i poprawić wyniki sportowe.">
+    <meta name="keywords" content="trener personalny lublin, treningi, diagnostyka sportowa, przygotowania motoryczne, lubelskie coach">
+    <link rel="canonical" href="https://dawidrejniak.pl/">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dawid Rejniak | Trener Personalny">
+    <meta property="og:description"
+        content="Personalne treningi, diagnostyka sportowa i przygotowanie motoryczne. Pomagam osiągać cele fitness i poprawić wyniki sportowe.">
+    <meta property="og:url" content="https:/dawidrejniak.pl/">
+    <meta property="og:site_name" content="Dawid Rejniak">
+    <meta property="article:publisher" content="https://www.instagram.com/dawid_rejniak/">
+    <meta property="article:modified_time" content="2024-11-06T03:17:18+00:00">
+    <meta property="og:image" content="{% static 'main.jpg' %}">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="200">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:label1" content="Szacowany czas czytania">
+    <meta name="twitter:data1" content="1 minuta">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
+    <script src="{% static 'script.js' %}"></script>
+    
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setCookieDomain", "*.dawidrejniak.pl"]);
+    _paq.push(["setDomains", ["*.dawidrejniak.pl"]]);
+    _paq.push(["disableCampaignParameters"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//stats68.mydevil.net/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '18']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'logo.png' %}" alt="Logo Dawid Rejniak">
+            </a>
+            <div class="hamburger" onclick="toggleMenu(this)">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'opinie' %}">Opinie</a></li>
+                <li><a href="{% url 'index' %}#kontakt">Kontakt</a></li>
+            </ul>
+            <ul class="nav-links-mobile">
+                <li><a href="{% url 'opinie' %}">Opinie</a></li>
+                <li><a href="{% url 'index' %}#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    {% if success_message %}
+    <div id="success-overlay" class="overlay">
+        <div class="overlay-text">
+            <p>{{ success_message }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+
+
+    <div class="orb anim1"></div>
+    <div class="orb anim2"></div>
+
+    <section class="section section-1">
+        <div class="section-wrapper">
+            <div class="section-text">
+                <h2>TRENER PERSONALNY</h2>
+                <h1>DAWID REJNIAK</h1>
+                <h3> Wspieram rozwój tych, którzy chcą być silniejsi, zdrowsi i bardziej sprawni</h3><br>
+                <button class="cta" id="scroll-kontakt">
+                        Umów konsultację
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                </button>
+            </div>
+            <div class="section-image">
+                <img src="{% static '1.png' %}" alt="Example Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-9">
+        <h1><em>Czujesz, że Twoje ciało potrzebuje</em> zmiany?</h1>
+        <h3>Pomagam przedsiębiorcom, sportowcom i osobom z siedzącym trybem życia z:</h3>
+        <h3 class="bigger">
+            <br>· przeciążeniami i <b>kontuzjami</b> 🧘🏽‍♀️
+            <br>· dopasowaniem treningu do stylu życia 🏃🏻‍♀️
+            <br>· osiąganiem <b>celów</b> 🏅</h3> 
+
+    </section>
+    
+
+    <section class="section section-8">
+        <h1><em>Jak mogę Ci</em> pomóc?</h1>
+            <div class="section-8-kafelek">
+                <h2>✅ Przygotowanie motoryczne</h2>
+                <p>Chcesz być lepszy w swoim sporcie? Dołącz do mnie, razem stworzymy z Ciebie prawdziwą maszynę, która <b>osiąga wyniki.</b></p>
+            </div>
+            <div class="section-8-kafelek">
+                <h2>✅ Powrót do sprawności</h2>
+                <p>Masz kontuzje, jesteś przed/po operacji? Spokojnie, odpowiedni trening i zaangażowanie pomoże Ci <b>wrócić</b> do ulubionych aktywności, hobby, pracy czy sportu.</p>
+            </div>
+            <div class="section-8-kafelek">
+                <h2>✅ Ruch od podstaw</h2>
+                <p>Dopiero zaczynasz? Szukasz kogoś, kto Cię <b>pokieruję oraz nauczy</b> podstaw treningu? Zapewniam Cię, że jesteś w dobrym miejscu.</p>
+            </div>
+    </section>
+
+    <section class="section section-10">
+        <div class="section-10-text">
+            <h1><em>Osiąganie długoterminowych efektów to złożony proces,</em> którego możesz się nauczyć.</h1><br>
+            <h3>🧠 Po za treningami, stawiam na to żebyś:</h3><br>
+            <p>
+            ·  Zrozumiał cały proces treningowy<br>
+            ·  Nauczył się podstaw <b>zdrowego stylu życia</b><br>
+            ·  <b>Zbudował nawyki</b>, które zostaną z Tobą na lata<br>
+            ·  Potrafił dostosować aktywność, nawet jeśli jesteś zabiegany<br>
+            ·  <b>Nauczył samodzielności</b>, aby ciągle być w dobrej formie</p>
+        </div>
+        <div class="section-10-img">
+            <img src="{% static '3.png' %}" alt="Zdjęcie Dawida">
+        </div>
+        <div class="section-4-button">
+            <button class="cta" id="scroll-kontakt">
+                <span>Umów konsultację</span>
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="section section-2">
+        <div class="section-wrapper-2">
+                    <div class="section-2-image">
+            <img src="{% static '6.png' %}" alt="Example Image">
+        </div>
+        <div class="section-2-text">
+            <h3>Z tej strony...</h3>
+            <h1>Dawid Rejniak</h1>
+            <p>...czyli spec od szeroko rozumianego <b><i>ruchu</i></b>. Pomagam mojej grupie osób zwiększając ich <b>sprawność</b> oraz <b>wydajność</b> poprzez edukacje i treningi dopasowane do potrzeb. Studiuję fizjoterapię (aktualnie czwarty rok) oraz wspieram sztab fizjoterapeutyczny drużyny futbolu amerykańskiego.</p>
+        </div>
+        </div>
+
+    </section>
+
+
+    <section class="section section-4">
+        <h1>Opinie</h1>
+        <div class="section-4-opinia">
+            <p>Dawid bardzo opanowany trener jeśli nie miałeś nic wspólnego z siłownią tak jak ja wytłumaczy ci każde ćwiczenie krok po kroku z każdym treningiem czułem progres !!! Polecam</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Michał Kowalski</h3>
+                    <p>Google</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Świetny trener personalny, który potrafi dopasować plan treningowy do potrzeb i możliwości swojego podopiecznego. To osoba cierpliwa, pełna energii i motywująca, która pomaga w osiąganiu zamierzonych celów treningowych. Gorąco polecam jego usługi!</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Kaśka</h3>
+                    <p>Google</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-opinia">
+            <p>Świetny trener, super komfortowa atmosfera na treningach, ćwiczenia są tłumaczone w zrozumiały sposób, o wszystko można zapytać. Polecam każdemu kto zaczyna swoją przygodę na siłowni!</p>
+            <div class="section-4-opinia-info">
+                <div class="section-4-opinia-info-dane">
+                    <h3>Ada S.</h3>
+                    <p>Oferteo</p>
+                </div>
+                <div class="section-4-opinia-info-stars">
+                    <img src="{% static 'stars.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="section-4-button">
+            <button class="cta" onclick="location.href='opinie'">
+                <span>Sprawdź więcej opinii</span>
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+            </button>
+        </div>
+        <div class="section-4-przycisk">
+            <p><a href="https://www.instagram.com/dawid_rejniak">...lub zobacz rezultaty na <img src="{% static 'instagram.png' %}" alt="Instagram"><em>Instagramie</em></a></p>
+        </div>
+    </section>
+
+    <section class="section section-7-karuzela">
+        <h1><em>To przyśpieszy twój </em>rozwój:</h1>
+        <div class="slider">
+            <button id="prev">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" transform="rotate(180, 0, 0)">
+                    <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>                
+            </button>
+            <div class="items">
+                <div class="item">
+                    <h2>📢<br>Społeczność</h2>
+                    <p>Dostęp do <b>zamkniętej grupy na FB,</b> gdzie organizuję różne wydarzenia oraz wrzucam dodatkowe treści.</p>
+                </div>
+                <div class="item">
+                    <h2>📘<br>Dodatkowe materiały</h2>
+                    <p><b>Dostaniesz specjalny arkusz,</b> który rozwiązuje najczęstsze problemy takie jak ból szyi, pleców czy wzmocnienie brzucha.</p>        
+                </div>
+                <div class="item">
+                    <h2>🏋️<br>Kameralne studio</h2>
+                    <p>Prowadzę <b>treningi w studio treningowym,</b> gdzie nie znajdziesz tłumów czy oceniającego wzroku innych ćwiczących.</p>        
+                </div>
+            </div>
+            <button id="next">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+
+
+    <section class="section section-5">
+        <h1>FAQ</h1>
+        <div class="section-5-pytanie">
+            <div class="section-5-pytanie-header">
+                <span class="icon" aria-hidden="true">+</span>
+                <h3>Gdzie odbywają się treningi?</h3>
+            </div>
+            <div class="section-5-pytanie-answer">
+                <p>Treningi stacjonarne prowadzę w kameralnym studio treningowym PowerClub Lublin ul. Wojciechowska 55, bez dodatkowych opłat za wejście/karnet</p>
+            </div>
+        </div>
+        <div class="section-5-pytanie">
+            <div class="section-5-pytanie-header">
+                <span class="icon" aria-hidden="true">+</span>
+                <h3>Ile kosztuje współpraca ze mną?</h3>
+            </div>
+            <div class="section-5-pytanie-answer">
+                <p>Każda współpraca wyceniana jest indywidualnie ponieważ zależy od wielu składowych</p>
+            </div>
+        </div>
+        <div class="section-5-pytanie">
+            <div class="section-5-pytanie-header">
+                <span class="icon" aria-hidden="true">+</span>
+                <h3>W jakich godzinach pracuje?</h3>
+            </div>
+            <div class="section-5-pytanie-answer">
+                <p>Od poniedziałku do piątku treningi prowadzę w godzinach porannych jak i wieczornych, a w weekendy tylko rano</p>
+            </div>
+        </div>
+        <div class="section-5-pytanie">
+            <div class="section-5-pytanie-header">
+                <span class="icon" aria-hidden="true">+</span>
+                <h3>Ile razy w tygodniu powinienem trenować?</h3>
+            </div>
+            <div class="section-5-pytanie-answer">
+                <p>Zazwyczaj będzie to od 1 do 4 razy w tygodniu, zależy od Twojego celu, innych aktywności, dyspozycji itd. Na pierwszej konsultacji doradzę Ci jaka opcja będzie najlepsza dla Ciebie</p>
+            </div>
+        </div>
+        <div class="section-5-pytanie">
+            <div class="section-5-pytanie-header">
+                <span class="icon" aria-hidden="true">+</span>
+                <h3>Jak przygotować się do pierwszej konsultacji?</h3>
+            </div>
+            <div class="section-5-pytanie-answer">
+                <p>Wystarczy, że zabierzesz ze sobą strój sportowy i wodę. W przypadku urazów/kontuzji przydatna też będzie dokumentacja medyczna.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section section-6">
+        <h1>Chcesz rozpocząć współpracę?</h1>
+        <h2>Wypełnij formularz poniżej ✅</h2>
+        <div class="contact-container">
+            <div class="section-6-form">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Imię</label><br>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">Email</label><br>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_phone">Telefon</label><br>
+                        {{ form.phone }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_message">Wiadomość</label><br>
+                        {{ form.message }}
+                    </div>
+                    <p>Wysyłając zgłoszenie, wyrażasz zgodę na przetwarzanie Twoich danych, abym mógł się z Tobą skontaktować.</p><br>
+                    <div class="section-4-button">
+                        <button class="cta" type="submit">
+                            <span>Wyślij</span>
+                            <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                  fill-rule="evenodd"
+                                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-info">
+                <h2>Napisz do mnie na Socialmediach lub mailem</h2><br>
+                <p>Email: <a href="mailto:dawidrejniak3@gmail.com">dawidrejniak3@gmail.com</a></p>
+                <p>SocialMedia:
+                    <a href="https://www.facebook.com/DawidRejniakTrener"><img src="{% static 'facebook.png' %}" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/dawid_rejniak"><img src="{% static 'instagram.png' %}" alt="Instagram"></a>
+                </p><br>
+                <p>Po wypełnieniu formularzu skontaktuje się z Tobą telefonicznie najszybciej jak to jest możliwe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Dawid Rejniak</h3>
+                    <p>Wspieram rozwój tych, którzy chcą być silniejsi, zdrowsi i bardziej sprawni.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Szybkie linki</h4>
+                    <ul>
+                        <li><a href="opinie">Opinie</a></li>
+                        <li><a id="scroll-kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-details">
+                    <h4>Kontakt</h4>
+                    <p>Telefon: <a href="tel:+48536407148">+48 536 407 148</a></p>
+                    <p>Email: <a href="mailto:dawidrejniak3@gmail.com">dawidrejniak3@gmail.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>SocialMedia</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/DawidRejniakTrener"><img src="{% static 'facebook.png' %}" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/dawid_rejniak"><img src="{% static 'instagram.png' %}" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dawid Rejniak - Trener Personalny (NIP: 7133124302)<br>Wszelkie prawa zastrzeżone. <a href="polityka_prywatnosci">Polityka prywatności</a></p><br>
+            </div>
+            <div class="author">
+                <p>Strona stworzona przez <a href="https://instagram.com/maksdesign.pl">Maks<u>Design</u>.pl</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+        window.addEventListener("scroll", function () {
+            const targetScroll = window.innerHeight * 0.5;
+            const body = document.body;
+            
+            if (window.scrollY >= targetScroll) {
+                body.classList.add("scrolled");
+            } else {
+                body.classList.remove("scrolled");
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const overlay = document.getElementById("success-overlay");
+            if (overlay) {
+                setTimeout(() => {
+                    overlay.classList.add("hide");
+                }, 3000);
+            }
+        });
+
+
+        document.querySelectorAll("#scroll-kontakt").forEach(element => {
+            element.addEventListener("click", function () {
+                const yOffset = -100;
+                const y = document.getElementById("kontakt").getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            });
+        });
+    
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const yOffset = -100;
+        const hash = window.location.hash;
+
+        if (window.location.hash) {
+            setTimeout(() => {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({ top: y });
+                }
+            }, 0);
+        }
+    });
+
+    function toggleMenu(hamburger) {
+        console.log("test")
+        hamburger.classList.toggle("active");
+        document.querySelector(".nav-links-mobile").classList.toggle("active");
+    }
+
+    const items = document.querySelectorAll('.items .item');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+
+let activeIndex = 1;
+
+function updateSlider() {
+    items.forEach((item, index) => {
+        const offset = index - activeIndex;
+        const scale = 1 - Math.abs(offset) * 0.2;
+        const zIndex = items.length - Math.abs(offset);
+
+        item.style.transform = `translateX(${offset * 120}px) scale(${scale})`;
+        item.style.zIndex = zIndex;
+        item.style.opacity = scale < 0.6 ? 0 : scale;
+    });
+}
+
+next.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % items.length;
+    updateSlider();
+});
+
+prev.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + items.length) % items.length;
+    updateSlider();
+});
+
+updateSlider();
+
+
+    </script>
+</body>
+</html>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.dawidrejniak.pl"]);
+  _paq.push(["setDomains", ["*.dawidrejniak.pl"]]);
+  _paq.push(["disableCampaignParameters"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats68.mydevil.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '18']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
