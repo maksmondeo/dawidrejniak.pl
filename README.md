@@ -6,6 +6,8 @@
 
 Even though the website doesn't feature a lot on the backend side, the frontend has been led to near perfection to make the website standout as much as possible from the competition.
 
+![Image](https://github.com/user-attachments/assets/5eee8441-11bb-45f1-8932-83163e007a66)
+
 ## Features
 
 ### Reviews Showcase
