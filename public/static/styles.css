@@ -584,9 +584,9 @@ i {
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 40px;
     padding-top: 40px;
-    margin-bottom: 40px;
     background-color: rgba(255,255,255,0.02);
     border-radius: 20px;
+    margin-bottom: 80px;
 }
 
 .section-6-form {
@@ -594,12 +594,50 @@ i {
     padding: 20px;
 }
 
-.contact-container {
+.form-2 {
+    justify-content: center!important;
+    align-items: center!important;
+}
+
+.contact-container, .exercises-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 20px 20px 20px;
+}
+
+.exercises-container {
+    margin-top: 40px;
+}
+
+.exercises-info-container dl {
+    list-style-position: inside;
+}
+
+.exercises-info-container dd {
+    text-align: left;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    display: list-item;
+    list-style-type: "✅ ";
+    padding-inline-start: 1ch;
+}
+
+.exercises-info-container {
+    width: 35%;
+    align-items: left;
+    text-align: left;
+    padding-right: 3%;
+}
+
+.exercises-photo-container {
+    width: 65%;
+}
+
+.exercises-photo-container img {
+    height: auto;
+    width: 100%;
 }
 
 .form-group {
@@ -845,7 +883,7 @@ footer {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #0d0d0d;
+    background-color: white;
     transition: 0.3s;
 }
 
@@ -986,8 +1024,17 @@ footer {
     margin-top: 8%;
 }
 
+.section-9-odbierz {
+    margin-top: 80px!important;
+    margin-bottom: 80px!important;
+}
+
 .section-9 ul {
     display:flex;
+}
+
+.exercises-container {
+    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -1181,15 +1228,58 @@ footer {
         margin-bottom: 80px;
     }
 
-    .section-6 {
+    .section-6, .section-9 {
         border: 0;
         background: 0;
+        padding: 10px;
+    }
+
+    .section-9-odbierz {
+        padding: 5px;
     }
 
     .bigger {
         font-size: 1.25rem!important;
         line-height: 1.25!important;
     }
+
+    .section-9-odbierz {
+        margin: 0 0 40px 0!important;
+        padding: 0 10px 0 10px;
+    }
+
+    .section-9-odbierz h1 {
+        margin: 0;
+    }
+
+    .exercises-container {
+        display: block;
+        margin: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .exercises-info-container {
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+
+    .exercises-info-container dd {
+        text-align: center;
+        font-size: 1.5rem
+    }
+
+    .exercises-photo-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .exercises-photo-container img {
+        text-align: center;
+        width: 98%;
+    }
+
+
 }
 
 @keyframes pulse-border {
